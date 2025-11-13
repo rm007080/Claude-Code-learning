@@ -6,7 +6,7 @@
 
 ## インストール方法の選択
 
-### 方法1: 直接インストール（2025年7月以降推奨）
+### 方法1: 直接インストール（推奨）
 
 **メリット**
 - セットアップが簡単
@@ -21,6 +21,8 @@
 - 初心者
 - シンプルな環境で使いたい
 - Windowsメインの開発
+
+**注**: Windows向けのネイティブインストールは、Git Bashやcurlツールが必要です。
 
 ### 方法2: WSL経由（全バージョン対応）
 
@@ -103,11 +105,24 @@ npm --version
 
 **2-2. Claude Codeのインストール**
 
-以下のコマンドを実行:
+**方法A: ネイティブインストール（推奨）**
+
+公式推奨の方法です:
+
+```powershell
+# Git Bash または WSL内で実行
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+**方法B: npmインストール**
+
+Node.jsが既にインストールされている場合:
 
 ```powershell
 npm install -g @anthropic-ai/claude-code
 ```
+
+**注意**: sudoは使用しないでください（権限の問題が発生する可能性があります）
 
 インストールには数分かかることがあります。以下のようなログが表示されます:
 
@@ -342,9 +357,19 @@ npm --version
 
 **3-1. Claude Codeのインストール**
 
+**方法A: ネイティブインストール（推奨）**
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+**方法B: npmインストール**
+
 ```bash
 npm install -g @anthropic-ai/claude-code
 ```
+
+**注意**: sudoは使用しないでください
 
 **3-2. インストールの確認**
 
